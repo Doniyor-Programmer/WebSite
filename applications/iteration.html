@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = +prompt(`natural son yozing o'shangacha sonlarni yozib beraman:`, "");
+        let qanday = prompt("Qanday yozilsin: vergul bilan, ketma-ket, oddiy");
+        for (let i = 1; i <= a; i++) {
+            if (qanday == "vergul bilan") {
+                document.write(`${i}, `);
+            } else if (qanday == "ketma-ket") {
+                document.write(`<h1>${i}</h1>`);
+            } else {
+                document.write(`<b>${i}</b><br>`);
+            }
+        }
+    </script>
+</body>
+
+</html>
