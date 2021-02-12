@@ -4,28 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>oddEven</title>
 </head>
 
 <body>
     <script>
 let num = 2;
 
-let putNum = +prompt("15 xonagacha Juft yoki Toq sonni aniqlaymiz, son yozing", "");
+let putNum = +prompt("Write integer number: ", "");
 
-function juftToq() {
+function evenOdd() {
     if (putNum % num == 0) {
-        document.write(`<h1>${putNum} juft son</h1>`);
+        document.write(`<h1>${putNum} even number</h1>`);
     } else if (putNum % num == 1) {
-        document.write(`<h1>${putNum} toq son</h1>`);
+        document.write(`<h1>${putNum} odd number</h1>`);
     } else if (putNum % num == -1) {
-        document.write(`<h1>${putNum} toq son</h1>`);
+        document.write(`<h1>${putNum} odd number</h1>`);
     } else {
         document.write(`<h1>Topolmadim</h1>`);
     }
 }
 
-juftToq();
+evenOdd();
     </script>
 </body>
 
