@@ -9,12 +9,12 @@
 
 <body>
     <script>
-        let a = +prompt(`natural son yozing o'shangacha sonlarni yozib beraman:`, "");
-        let qanday = prompt("Qanday yozilsin: vergul bilan, ketma-ket, oddiy");
+        let a = +prompt(`Write natural number > 1 :`, "");
+        let qanday = prompt("Please write: with comma or h1 or default ","");
         for (let i = 1; i <= a; i++) {
-            if (qanday == "vergul bilan") {
+            if (qanday == "with comma") {
                 document.write(`${i}, `);
-            } else if (qanday == "ketma-ket") {
+            } else if (qanday == "h1") {
                 document.write(`<h1>${i}</h1>`);
             } else {
                 document.write(`<b>${i}</b><br>`);
