@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Navigator</title>
     <style type="text/css">
-      .ac {
+    .ac {
             color: #333;
             border: 1px solid #000;
             background-color: #aaa;
@@ -20,9 +19,159 @@
             text-align: center;
             width: 100%;
         }
+      
+		.check {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: #333;
+		}
+
+		.check_active {
+			top: -100%;
+			transition: 1s all;
+		}
+
+		.check_wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: column;
+			width: 360px;
+			height: 490px;
+			background-color: blue;
+		}
+
+		.check_text {
+			color: #fff;
+			font-size: 2em;
+			font-family: sans-serif;
+			text-align: center;
+			font-weight: 700;
+		}
+
+		.name {
+			display: block;
+			margin: 0 auto;
+			width: 250px;
+			height: 36px;
+			border: 1px solid #333;
+			border-radius: 4px;
+			outline: none;
+			font-family: sans-serif;
+			font-size: 1.6em;
+			font-weight: 700;
+		}
+
+		.surname {
+			display: block;
+			margin: 0 auto;
+			width: 250px;
+			height: 36px;
+			border: 1px solid #333;
+			border-radius: 4px;
+			outline: none;
+			font-family: sans-serif;
+			font-size: 1.6em;
+			font-weight: 700;
+		}
+
+		.password {
+			display: block;
+			margin: 0 auto;
+			width: 250px;
+			height: 36px;
+			border: 1px solid #333;
+			border-radius: 4px;
+			outline: none;
+			font-family: sans-serif;
+			font-size: 1.6em;
+			font-weight: 700;
+		}
+
+		.enter {
+			display: block;
+			width: 100px;
+			margin: 0 auto;
+			background-color: darkred;
+			border: none;
+			border-radius: 4px;
+			outline: none;
+			cursor: pointer;
+			color: #fff;
+			font-weight: 700;
+			font-size: 2em;
+			font-family: sans-serif;
+		}
+
+		.enter:hover {
+			background-color: red;
+			transition: 0.3s all;
+		}
+
+		.error_text {
+			color: red;
+			font-family: sans-serif;
+			font-size: 2em;
+			font-weight: 700;
+		}
+
+		.account {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+			height: 50px;
+			background-color: #333;
+		}
+
+		.circle {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+			color: #fff;
+			font-family: sans-serif;
+			font-weight: 700;
+			background-color: orange;
+		}
+
+		.circle:hover {
+			border: 3px solid #fff;
+			cursor: pointer;
+		}
+
+		.user {
+			color: #fff;
+			font-family: sans-serif;
+			font-weight: 700;
+			font-size: 2em;
+			letter-spacing: 3px;
+		}
     </style>
   </head>
   <body>
+    	<div class="check">
+		<div class="check_wrapper">
+			<div class="check_text">Registration</div>
+			<div class="error_text"></div>
+			<input type="text" placeholder="Your Name" class="name">
+			<input type="text" placeholder="Your Surname" class="surname">
+			<input type="password" placeholder="Password" class="password">
+			<button class="enter">Enter</button>	
+		</div>
+	</div>
+	<div class="account">
+		<div class="circle"></div>
+		<div class="user"></div>
+	</div>
+
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Home</a>
@@ -83,5 +232,28 @@
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A11c9a7df29495fd4c05407f9b8ba361dc4a0bf678b27aaf5f871ffce15155cbe&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+  <script type="text/javascript">
+		window.addEventListener("DOMContentLoaded", () => {
+			let check = document.querySelector(".check"),
+				error_text = document.querySelector(".error_text"),
+				inputName = document.querySelector(".name"),
+				inputSurname = document.querySelector(".surname"),
+				inputPassword = document.querySelector(".password"),
+				enterBtn = document.querySelector(".enter"),
+				circle = document.querySelector(".circle"),
+				user = document.querySelector(".user"),
+				password = "200713";
+
+			enterBtn.addEventListener("click", () => {
+				if (inputName.value != "" && inputSurname.value != "" && inputPassword.value == password) {
+					check.classList.add("check_active");
+					circle.textContent = `${inputName.value.charAt(0)}${inputSurname.value.charAt(0)}`;
+					user.textContent = `${inputName.value} ${inputSurname.value}`;
+				} else {
+					error_text.textContent = "Invalid Password or Please fill the inputs";
+				}
+			});
+		});
+</script>
   </body>
 </html>
