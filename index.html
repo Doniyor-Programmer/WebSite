@@ -9,6 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Navigator</title>
     <style type="text/css">
+	    body {
+	    	z-index: -1 !important;
+		overflow: hidden !important;
+	    }
+	    
     .ac {
             color: #333;
             border: 1px solid #000;
@@ -29,6 +34,7 @@
 			width: 100%;
 			height: 100%;
 			background-color: #333;
+			z-index: 1 !important;
 		}
 
 		.check_active {
@@ -249,6 +255,7 @@
 					check.classList.add("check_active");
 					circle.textContent = `${inputName.value.charAt(0)}${inputSurname.value.charAt(0)}`;
 					user.textContent = `${inputName.value} ${inputSurname.value}`;
+					document.body.style.cssText = `z-index: 1 !important; overflow: auto !important`;
 				} else {
 					error_text.textContent = "Invalid Password or Please fill the inputs";
 				}
