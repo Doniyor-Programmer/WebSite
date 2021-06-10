@@ -161,6 +161,63 @@
 			font-size: 2em;
 			letter-spacing: 3px;
 		}
+	    
+	          * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .tele {
+        cursor: pointer;
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+        font-size: 9em;
+        font-family: sans-serif;
+        transform: rotate(0deg);
+        transition: 0.4s all;
+      }
+
+      .tele:hover {
+        transform: rotate(360deg);
+        transition: 0.4s all;
+      }
+
+      .fb {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #fff;
+        width: 64px;
+        height: 64px;
+        border-radius: 100%;
+      }
+
+      .fb:first-child {
+        background-color: #255fff;
+      }
+
+      .fb:nth-child(2) {
+        background-color: blue;
+      }
+
+      .fb:nth-child(3) {
+        background-color: red;
+      }
+
+      .fb:last-child {
+        background-color: purple;
+      }
+
+      .flexb {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 3px solid black;
+        width: 100%;
+        height: 100px;
+        background-color: #333;
+      }
     </style>
   </head>
   <body>
@@ -239,6 +296,20 @@
   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A11c9a7df29495fd4c05407f9b8ba361dc4a0bf678b27aaf5f871ffce15155cbe&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
+    <div class="flexb">
+      <div class="fb">
+        <a href="https://t.me/doniyor_programmer14" target="_blank"><img src="telegram-plane-brands.svg" alt="t" class="tele"></a>
+      </div>
+      <div class="fb">
+        <a href="https://www.facebook.com/zafar.abdullayov/" target="_blank"><img src="facebook-f-brands.svg" alt="f" class="tele"></a>
+      </div>
+      <div class="fb">
+        <a href="https://www.youtube.com/channel/UCnmI6EU_0-BsVWTt_TMChUg" target="_blank"><img src="youtube-brands.svg" alt="f" class="tele"></a>
+      </div>
+      <div class="fb">
+        <a href="https://doniyor-programmer.github.io/WebSite/" target="_blank"><img src="instagram-brands.svg" alt="f" class="tele"></a>
+      </div>
+    </div>
   <script type="text/javascript">
 		window.addEventListener("DOMContentLoaded", () => {
 			let check = document.querySelector(".check"),
