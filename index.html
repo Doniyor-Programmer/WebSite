@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This is my website">
     <meta name="author" content="Doniyor-Programmer">
     <meta name="keywords" content="Doniyor-Programmer, WebSite, UzbekDasturchilari">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Navigator</title>
     <style type="text/css">
-	    body {
-	    	z-index: -1 !important;
-		overflow: hidden !important;
-	    }
-	    
-    .ac {
+        body {
+            z-index: -1 !important;
+            overflow: hidden !important;
+        }
+
+        .ac {
             color: #333;
             border: 1px solid #000;
             background-color: #aaa;
@@ -24,202 +26,203 @@
             text-align: center;
             width: 100%;
         }
-      
-		.check {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			position: absolute;
-			top: 0%;
-			width: 100%;
-			height: 100%;
-			background-color: #333;
-			z-index: 1 !important;
-		}
 
-		.check_active {
-			top: -100%;
-			transition: 1s all;
-		}
+        .check {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            z-index: 1 !important;
+        }
 
-		.check_wrapper {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			flex-direction: column;
-			width: 360px;
-			height: 490px;
-			background-color: blue;
-		}
+        .check_active {
+            top: -100%;
+            transition: 1s all;
+        }
 
-		.check_text {
-			color: #fff;
-			font-size: 2em;
-			font-family: sans-serif;
-			text-align: center;
-			font-weight: 700;
-		}
+        .check_wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            width: 360px;
+            height: 490px;
+            background-color: blue;
+        }
 
-		.name {
-			display: block;
-			margin: 0 auto;
-			width: 250px;
-			height: 36px;
-			border: 1px solid #333;
-			border-radius: 4px;
-			outline: none;
-			font-family: sans-serif;
-			font-size: 1.6em;
-			font-weight: 700;
-		}
+        .check_text {
+            color: #fff;
+            font-size: 2em;
+            font-family: sans-serif;
+            text-align: center;
+            font-weight: 700;
+        }
 
-		.surname {
-			display: block;
-			margin: 0 auto;
-			width: 250px;
-			height: 36px;
-			border: 1px solid #333;
-			border-radius: 4px;
-			outline: none;
-			font-family: sans-serif;
-			font-size: 1.6em;
-			font-weight: 700;
-		}
+        .name {
+            display: block;
+            margin: 0 auto;
+            width: 250px;
+            height: 36px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            outline: none;
+            font-family: sans-serif;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
 
-		.password {
-			display: block;
-			margin: 0 auto;
-			width: 250px;
-			height: 36px;
-			border: 1px solid #333;
-			border-radius: 4px;
-			outline: none;
-			font-family: sans-serif;
-			font-size: 1.6em;
-			font-weight: 700;
-		}
+        .surname {
+            display: block;
+            margin: 0 auto;
+            width: 250px;
+            height: 36px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            outline: none;
+            font-family: sans-serif;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
 
-		.enter {
-			display: block;
-			width: 100px;
-			margin: 0 auto;
-			background-color: darkred;
-			border: none;
-			border-radius: 4px;
-			outline: none;
-			cursor: pointer;
-			color: #fff;
-			font-weight: 700;
-			font-size: 2em;
-			font-family: sans-serif;
-		}
+        .password {
+            display: block;
+            margin: 0 auto;
+            width: 250px;
+            height: 36px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            outline: none;
+            font-family: sans-serif;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
 
-		.enter:hover {
-			background-color: red;
-			transition: 0.3s all;
-		}
+        .enter {
+            display: block;
+            width: 100px;
+            margin: 0 auto;
+            background-color: darkred;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            color: #fff;
+            font-weight: 700;
+            font-size: 2em;
+            font-family: sans-serif;
+        }
 
-		.error_text {
-			color: red;
-			font-family: sans-serif;
-			text-align: center;
-			font-size: 2em;
-			font-weight: 700;
-		}
+        .enter:hover {
+            background-color: red;
+            transition: 0.3s all;
+        }
 
-		.account {
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
-			width: 100%;
-			height: 50px;
-			background-color: #333;
-		}
+        .error_text {
+            color: red;
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 2em;
+            font-weight: 700;
+        }
 
-		.circle {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 40px;
-			height: 40px;
-			border-radius: 100%;
-			color: #fff;
-			font-family: sans-serif;
-			font-weight: 700;
-			background-color: orange;
-		}
+        .account {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            background-color: #333;
+        }
 
-		.circle:hover {
-			border: 3px solid #fff;
-			cursor: pointer;
-		}
+        .circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 700;
+            background-color: orange;
+        }
 
-		.user {
-			color: #fff;
-			font-family: sans-serif;
-			font-weight: 700;
-			font-size: 2em;
-			letter-spacing: 3px;
-		}
-	    
-	          * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .tele {
-        cursor: pointer;
-        display: inline-block;
-        width: 36px;
-        height: 36px;
-        font-size: 9em;
-        font-family: sans-serif;
-        transform: rotate(0deg);
-        transition: 0.4s all;
-      }
+        .circle:hover {
+            border: 3px solid #fff;
+            cursor: pointer;
+        }
 
-      .tele:hover {
-        transform: rotate(360deg);
-        transition: 0.4s all;
-      }
+        .user {
+            color: #fff;
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 2em;
+            letter-spacing: 3px;
+        }
 
-      .fb {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 3px solid #fff;
-        width: 64px;
-        height: 64px;
-        border-radius: 100%;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      .fb:first-child {
-        background-color: #255fff;
-      }
+        .tele {
+            cursor: pointer;
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            font-size: 9em;
+            font-family: sans-serif;
+            transform: rotate(0deg);
+            transition: 0.4s all;
+        }
 
-      .fb:nth-child(2) {
-        background-color: blue;
-      }
+        .tele:hover {
+            transform: rotate(360deg);
+            transition: 0.4s all;
+        }
 
-      .fb:nth-child(3) {
-        background-color: red;
-      }
+        .fb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid #fff;
+            width: 64px;
+            height: 64px;
+            border-radius: 100%;
+        }
 
-      .fb:last-child {
-        background-color: purple;
-      }
+        .fb:first-child {
+            background-color: #255fff;
+        }
 
-      .flexb {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        border: 3px solid black;
-        width: 100%;
-        height: 100px;
-        background-color: #333;
-      }
-	    
-	#scrollBtn {
+        .fb:nth-child(2) {
+            background-color: blue;
+        }
+
+        .fb:nth-child(3) {
+            background-color: red;
+        }
+
+        .fb:last-child {
+            background-color: purple;
+        }
+
+        .flexb {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 3px solid black;
+            width: 100%;
+            height: 100px;
+            background-color: #333;
+        }
+
+        #scrollBtn {
             width: 42px;
             height: 42px;
             display: none;
@@ -260,146 +263,165 @@
 
         #scrollBtn:hover {
             background-color: rgba(0, 0, 0, 0.9);
-	    transition: 0.3s all;
+            transition: 0.3s all;
         }
     </style>
-  </head>
-  <body>
-	<div id="scrollBtn" title="Go to top"></div>
-    	<div class="check">
-		<div class="check_wrapper">
-			<div class="check_text">Registration</div>
-			<div class="error_text"></div>
-			<input type="text" placeholder="Your Name" class="name">
-			<input type="text" placeholder="Your Surname" class="surname">
-			<input type="password" placeholder="Password" class="password">
-			<button class="enter">Enter</button>	
-		</div>
-	</div>
-	<div class="account">
-		<div class="circle"></div>
-		<div class="user"></div>
-	</div>
+</head>
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Home</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="https://github.com/Doniyor-Programmer/WebSite/archive/gh-pages.zip">Downloads</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="https://github.com/Doniyor-Programmer">Docs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="https://www.youtube.com/channel/UCnmI6EU_0-BsVWTt_TMChUg">My channel</a>
-        </li>
-      </ul>
+<body>
+    <div id="scrollBtn" title="Go to top"></div>
+    <div class="check">
+        <div class="check_wrapper">
+            <div class="check_text">Registration</div>
+            <div class="error_text"></div>
+            <input type="text" placeholder="Your Name" class="name">
+            <input type="text" placeholder="Your Surname" class="surname">
+            <input type="password" placeholder="Password" class="password">
+            <button class="enter">Enter</button>
+        </div>
     </div>
-  </div>
-</nav>
-
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Projects
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <a class="ac" href="applications/ball.html" target="_blank">ball.html</a><br><br>
-        <a class="ac" href="applications/calc.html" target="_blank">calc.html</a><br><br>
-        <a class="ac" href="applications/iteration.html" target="_blank">iteration.html</a><br><br>
-        <a class="ac" href="applications/jufttoq.html" target="_blank">oddEven.html</a><br><br>
-        <a class="ac" href="applications/tablUm.html" target="_blank">tablUm.html</a><br><br>
-        <a class="ac" href="applications/str.html" target="_blank">str.html</a><br><br>
-        <a class="ac" href="applications/realTablUm.html" target="_blank">realTablUm.html</a><br><br>
-        <a class="ac" href="applications/podskazkaTablUm.html" target="_blank">podskazkaTablUm.html</a><br><br>
-        <a class="ac" href="image/image.html" target="_blank">image.html</a><br><br>
-        <a class="ac" href="applications/colors.html" target="_blank">colors.html</a><br><br>
-        <a class="ac" href="applications/strReverse.html" target="_blank">strReverse.html</a><br><br>
-        <a class="ac" href="practice/responsiblePractice.html" target="_blank">responsiblePractice.html</a><br><br>
-        <a class="ac" href="quotes/quote.html" target="_blank">Quotes</a><br><br>
-        <a class="ac" href="woman/woman1.html" target="_blank">woman'sDay</a><br><br>
-        <a class="ac" href="imageLoop/imageLoop.html" target="_blank">imageLoop</a><br><br>
-        <a class="ac" href="four/four.html" target="_blank">Four-Card-Project</a><br><br>
-        <a class="ac" href="profile/profile.html" target="_blank">Profile-Project</a><br><br>
-        <a class="ac" href="uglyExample/uglyExample.html" target="_blank">uglyExample</a><br><br>
-        <a class="ac" href="call/call.html" target="_blank">Call</a><br><br>
-        <a class="ac" href="test/test.html" target="_blank">test</a><br><br>
-        <a class="ac" href="modal/modal.html" target="_blank">modal1</a><br><br>
-        <a class="ac" href="copy.html" target="_blank">copy</a><br><br>
-        <a class="ac" href="animate_star.html" target="_blank">animate_star_mikedane</a><br><br>
-        <a class="ac" href="lab2.html" target="_blank">lab2</a><br><br>
-        <a class="ac" href="spinner.html" target="_blank">spinner</a><br><br>
-      </div>
+    <div class="account">
+        <div class="circle"></div>
+        <div class="user"></div>
     </div>
-  </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A11c9a7df29495fd4c05407f9b8ba361dc4a0bf678b27aaf5f871ffce15155cbe&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true"></script>
-    <div class="flexb">
-      <div class="fb">
-        <a href="https://t.me/doniyor_programmer14" target="_blank"><img src="telegram-plane-brands.svg" alt="t" class="tele"></a>
-      </div>
-      <div class="fb">
-        <a href="https://www.facebook.com/zafar.abdullayov/" target="_blank"><img src="facebook-f-brands.svg" alt="f" class="tele"></a>
-      </div>
-      <div class="fb">
-        <a href="https://www.youtube.com/channel/UCnmI6EU_0-BsVWTt_TMChUg" target="_blank"><img src="youtube-brands.svg" alt="f" class="tele"></a>
-      </div>
-      <div class="fb">
-        <a href="https://doniyor-programmer.github.io/WebSite/" target="_blank"><img src="instagram-brands.svg" alt="f" class="tele"></a>
-      </div>
-    </div>
-  <script type="text/javascript">
-		window.addEventListener("DOMContentLoaded", () => {
-			let check = document.querySelector(".check"),
-				error_text = document.querySelector(".error_text"),
-				inputName = document.querySelector(".name"),
-				inputSurname = document.querySelector(".surname"),
-				inputPassword = document.querySelector(".password"),
-				enterBtn = document.querySelector(".enter"),
-				circle = document.querySelector(".circle"),
-				user = document.querySelector(".user"),
-				password = "200713";
 
-			enterBtn.addEventListener("click", () => {
-				if (inputName.value != "" && inputSurname.value != "" && inputPassword.value == password) {
-					check.classList.add("check_active");
-					circle.textContent = `${inputName.value.charAt(0)}${inputSurname.value.charAt(0)}`;
-					user.textContent = `${inputName.value} ${inputSurname.value}`;
-					document.body.style.cssText = `z-index: 1 !important; overflow: auto !important`;
-				} else {
-					error_text.textContent = "Invalid Password or Please fill the inputs";
-				}
-			});
-			
-	let scrollBtn = document.querySelector("#scrollBtn");
-		
-//window.onscroll = function() {scrollFunction()};
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="https://github.com/Doniyor-Programmer/WebSite/archive/gh-pages.zip">Downloads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://github.com/Doniyor-Programmer">Docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="https://www.youtube.com/channel/UCnmI6EU_0-BsVWTt_TMChUg">My
+                            channel</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-}
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Projects
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <a class="ac" href="applications/ball.html" target="_blank">ball.html</a><br><br>
+                    <a class="ac" href="applications/calc.html" target="_blank">calc.html</a><br><br>
+                    <a class="ac" href="applications/iteration.html" target="_blank">iteration.html</a><br><br>
+                    <a class="ac" href="applications/jufttoq.html" target="_blank">oddEven.html</a><br><br>
+                    <a class="ac" href="applications/tablUm.html" target="_blank">tablUm.html</a><br><br>
+                    <a class="ac" href="applications/str.html" target="_blank">str.html</a><br><br>
+                    <a class="ac" href="applications/realTablUm.html" target="_blank">realTablUm.html</a><br><br>
+                    <a class="ac" href="applications/podskazkaTablUm.html"
+                        target="_blank">podskazkaTablUm.html</a><br><br>
+                    <a class="ac" href="image/image.html" target="_blank">image.html</a><br><br>
+                    <a class="ac" href="applications/colors.html" target="_blank">colors.html</a><br><br>
+                    <a class="ac" href="applications/strReverse.html" target="_blank">strReverse.html</a><br><br>
+                    <a class="ac" href="practice/responsiblePractice.html"
+                        target="_blank">responsiblePractice.html</a><br><br>
+                    <a class="ac" href="quotes/quote.html" target="_blank">Quotes</a><br><br>
+                    <a class="ac" href="woman/woman1.html" target="_blank">woman'sDay</a><br><br>
+                    <a class="ac" href="imageLoop/imageLoop.html" target="_blank">imageLoop</a><br><br>
+                    <a class="ac" href="four/four.html" target="_blank">Four-Card-Project</a><br><br>
+                    <a class="ac" href="profile/profile.html" target="_blank">Profile-Project</a><br><br>
+                    <a class="ac" href="uglyExample/uglyExample.html" target="_blank">uglyExample</a><br><br>
+                    <a class="ac" href="call/call.html" target="_blank">Call</a><br><br>
+                    <a class="ac" href="test/test.html" target="_blank">test</a><br><br>
+                    <a class="ac" href="modal/modal.html" target="_blank">modal1</a><br><br>
+                    <a class="ac" href="copy.html" target="_blank">copy</a><br><br>
+                    <a class="ac" href="animate_star.html" target="_blank">animate_star_mikedane</a><br><br>
+                    <a class="ac" href="lab2.html" target="_blank">lab2</a><br><br>
+                    <a class="ac" href="spinner.html" target="_blank">spinner</a><br><br>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A11c9a7df29495fd4c05407f9b8ba361dc4a0bf678b27aaf5f871ffce15155cbe&amp;width=100%25&amp;height=240&amp;lang=ru_RU&amp;scroll=true">
+        </script>
+        <div class="flexb">
+            <div class="fb">
+                <a href="https://t.me/doniyor_programmer14" target="_blank"><img src="telegram-plane-brands.svg" alt="t"
+                        class="tele"></a>
+            </div>
+            <div class="fb">
+                <a href="https://www.facebook.com/zafar.abdullayov/" target="_blank"><img src="facebook-f-brands.svg"
+                        alt="f" class="tele"></a>
+            </div>
+            <div class="fb">
+                <a href="https://www.youtube.com/channel/UCnmI6EU_0-BsVWTt_TMChUg" target="_blank"><img
+                        src="youtube-brands.svg" alt="f" class="tele"></a>
+            </div>
+            <div class="fb">
+                <a href="https://doniyor-programmer.github.io/WebSite/" target="_blank"><img src="instagram-brands.svg"
+                        alt="f" class="tele"></a>
+            </div>
+        </div>
+        <script type="text/javascript">
+            window.addEventListener("DOMContentLoaded", () => {
+                let check = document.querySelector(".check"),
+                    error_text = document.querySelector(".error_text"),
+                    inputName = document.querySelector(".name"),
+                    inputSurname = document.querySelector(".surname"),
+                    inputPassword = document.querySelector(".password"),
+                    enterBtn = document.querySelector(".enter"),
+                    circle = document.querySelector(".circle"),
+                    user = document.querySelector(".user"),
+                    password = "200713";
 
-window.addEventListener("scroll", scrollFunction);			
+                enterBtn.addEventListener("click", () => {
+                    if (inputName.value != "" && inputSurname.value != "" && inputPassword.value ==
+                        password) {
+                        check.classList.add("check_active");
+                        circle.textContent =
+                            `${inputName.value.charAt(0)}${inputSurname.value.charAt(0)}`;
+                        user.textContent = `${inputName.value} ${inputSurname.value}`;
+                        document.body.style.cssText =
+                            `z-index: 1 !important; overflow: auto !important`;
+                    } else {
+                        error_text.textContent = "Invalid Password or Please fill the inputs";
+                    }
+                });
 
-        function topFunction() {
-            document.body.scrollTop = 0;
-	    document.documentElement.scrollTop = 0;
-        }
+                let scrollBtn = document.querySelector("#scrollBtn");
 
-        scrollBtn.addEventListener("click", topFunction);
-		});
-</script>
-  </body>
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        scrollBtn.style.display = "block";
+                    } else {
+                        scrollBtn.style.display = "none";
+                    }
+                }
+
+                window.addEventListener("scroll", scrollFunction);
+
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+
+                scrollBtn.addEventListener("click", topFunction);
+            });
+        </script>
+</body>
+
 </html>
