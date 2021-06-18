@@ -218,9 +218,53 @@
         height: 100px;
         background-color: #333;
       }
+	    
+	#scrollBtn {
+            width: 42px;
+            height: 42px;
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: rgba(0, 0, 0, 1);
+            cursor: pointer;
+            border-radius: 100%;
+        }
+
+        #scrollBtn::before {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 10%;
+            top: 50%;
+            width: 23px;
+            height: 4px;
+            background-color: #fff;
+            transform: rotate(45deg) translateY(-50%);
+        }
+
+        #scrollBtn::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            width: 23px;
+            height: 4px;
+            background-color: #fff;
+            transform: rotate(-45deg) translateY(-50%);
+        }
+
+        #scrollBtn:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
     </style>
   </head>
   <body>
+	<div id="scrollBtn" title="Go to top"></div>
     	<div class="check">
 		<div class="check_wrapper">
 			<div class="check_text">Registration</div>
@@ -333,6 +377,27 @@
 					error_text.textContent = "Invalid Password or Please fill the inputs";
 				}
 			});
+			
+	let mybutton = document.querySelector("#scrollBtn");
+
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        mybutton.addEventListener("click", topFunction);
 		});
 </script>
   </body>
