@@ -1,3 +1,8 @@
+html {
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
 body {
     background: url("../images/bg-pattern-top.svg") top left/cover no-repeat;
     background-color: green;
